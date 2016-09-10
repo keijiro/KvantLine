@@ -38,7 +38,7 @@ float4 _Scale;
 
 float UVToPosition(float2 uv)
 {
-    return (uv.x + ceil(uv.x - _Scroll) - 0.5) * _Length;
+    return (uv.x - ceil(uv.x - _Scroll) - 0.5) * _Length;
 }
 
 float4 frag_Position(v2f_img i) : SV_Target

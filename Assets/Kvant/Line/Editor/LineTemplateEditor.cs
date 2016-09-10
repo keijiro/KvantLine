@@ -58,6 +58,11 @@ namespace Kvant
             // Readonly members
             EditorGUILayout.LabelField("Instance Count", template.instanceCount.ToString());
 
+            EditorGUILayout.Space();
+
+            // Rebuild button
+            rebuild |= GUILayout.Button("Rebuild");
+
             // Rebuild the template mesh when the properties are changed.
             if (rebuild) template.RebuildMesh();
         }
